@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <title>Ejercicio 14</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Décimo cuarto ejercicio</h1>
+      <h2>Código</h2>
+      <p class="codigo">
+        const grados = (grados = undefined, tipo = "") => { <br />&nbsp;
+        &nbsp;if (grados === undefined) return document.write("No ingresaste los
+        grados");<br />
+        &nbsp; &nbsp;if (tipo === "") return document.write("NO ingresaste el
+        tipo de conversión");<br />
+        &nbsp; &nbsp;if (typeof grados !== "number" || typeof tipo !== "string")
+        return document.write("Los datos ingresados son incorrectos");<br />
+
+        &nbsp; &nbsp;return tipo.toLowerCase() === "c"<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;? document.write( `${grados} Celcius es
+        equivalente a ${Math.round( grados * (9 / 5) + 32 )} grados Farenheit` )
+        <br />
+        &nbsp; &nbsp;&nbsp; &nbsp;: tipo.toLowerCase() === "f" <br />
+        &nbsp; &nbsp;&nbsp; &nbsp;? document.write( `${grados} Farenheit es
+        equivalente a ${Math.round( (grados - 32) * (5 / 9) )} grados Farenheit`
+        ) <br />
+        &nbsp; &nbsp;&nbsp; &nbsp;: document.write("Tipo de conversión no
+        contemplada"); <br />
+        };<br /><br />grados(12, "f");
+      </p>
+
+      <h2>Resultado</h2>
+      <p class="codigo">
+        <script src="../js/ejercicio14.js"></script>
+      </p>
+
+      <div class="container-enlace">
+        <div class="enlace">
+          <a href="Ejercicio13.html">Anterior</a>
+        </div>
+        <div class="enlace">
+          <a href="/Ejercicios logica/Ejercicios_basicos.html">Volver</a>
+        </div>
+        <div class="enlace">
+          <a href="Ejercicio15.html">Siguiente</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

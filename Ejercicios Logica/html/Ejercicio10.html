@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <title>Ejercicio 10</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Décimo ejercicio</h1>
+      <h2>Código</h2>
+      <p class="codigo">
+        const capicua = (numero = 0) => { <br />
+        &nbsp; &nbsp; if (!numero) return document.write("NO ingresaste ningún
+        número"); <br />
+        &nbsp; &nbsp; if (typeof numero != "number") return
+        document.write("Debes ingresar un número"); <br /><br />
+
+        &nbsp; &nbsp; numero = numero.toString(); <br />
+        &nbsp; &nbsp; let al_reves = numero.split("").reverse().join("");
+        <br /><br />
+
+        &nbsp; &nbsp; return numero === al_reves <br />
+        &nbsp; &nbsp;&nbsp; &nbsp; ? document.write(`El número ${numero} es
+        capicúa`) <br />
+        &nbsp; &nbsp;&nbsp; &nbsp; : document.write(`El número ${numero} NO es
+        capicúa`); <br />
+        }; <br /><br />capicua(2000);
+      </p>
+
+      <h2>Resultado</h2>
+      <p class="codigo">
+        <script src="../js/ejercicio10.js"></script>
+      </p>
+
+      <div class="container-enlace">
+        <div class="enlace">
+          <a href="Ejercicio9.html">Anterior</a>
+        </div>
+        <div class="enlace">
+          <a href="/Ejercicios logica/Ejercicios_basicos.html">Volver</a>
+        </div>
+        <div class="enlace">
+          <a href="Ejercicio11.html">Siguiente</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

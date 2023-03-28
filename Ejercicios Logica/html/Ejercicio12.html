@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <title>Ejercicio 12</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Décimo segundo ejercicio</h1>
+      <h2>Código</h2>
+      <p class="codigo">
+        const primo = (numero = undefined) => { <br />
+        &nbsp; &nbsp;if (numero === undefined) return document.write("NO
+        ingresaste ningún número"); <br />
+        &nbsp; &nbsp;if (typeof numero !== "number") return
+        document.write("Debes ingresar un número");<br />
+        &nbsp; &nbsp;if (numero === 0) return document.write("NO es posible
+        sacar el factorial de 0"); <br />
+        &nbsp; &nbsp;if (Math.sign(numero) === -1) return document.write("El
+        número NO puede ser negativo");<br />
+        &nbsp; &nbsp;if (numero === 1) return document.write("El número NO puede
+        ser 1"); <br /><br />
+
+        &nbsp; &nbsp;let divisible = false; <br /><br />
+
+        &nbsp; &nbsp;for (let i = 2; i < numero; i++) {<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;if (numero % i === 0) {<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;divisible = true;<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;break;<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;} <br />
+        &nbsp; &nbsp;} <br />
+        &nbsp; &nbsp;return divisible <br />
+        &nbsp; &nbsp;&nbsp; &nbsp;? document.write(`El número ${numero} NO es
+        primo`) <br />
+        &nbsp; &nbsp;&nbsp; &nbsp;: document.write(`El número ${numero} es
+        primo`);<br />
+        }; <br /><br />primo(7);
+      </p>
+
+      <h2>Resultado</h2>
+      <p class="codigo">
+        <script src="../js/ejercicio12.js"></script>
+      </p>
+
+      <div class="container-enlace">
+        <div class="enlace">
+          <a href="Ejercicio11.html">Anterior</a>
+        </div>
+        <div class="enlace">
+          <a href="/Ejercicios logica/Ejercicios_basicos.html">Volver</a>
+        </div>
+        <div class="enlace">
+          <a href="Ejercicio13.html">Siguiente</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <title>Ejercicio 6</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sexto ejercicio</h1>
+      <h2>Código</h2>
+      <p class="codigo">
+        const palabraRepetida = (cadena = "", texto = "") => { <br />&nbsp;
+        &nbsp;if (!cadena) return console.warn("NO ingresaste una cadena");
+        <br />
+        &nbsp; &nbsp;if (!texto) return console.warn("NO ingresasteel texto a
+        evaluar"); <br /><br />
+
+        &nbsp; &nbsp;let i = 0, contador = 0;<br />
+
+        &nbsp; &nbsp;while (i !== -1) { <br />
+        &nbsp; &nbsp;&nbsp; &nbsp; i = cadena.indexOf(texto, i); <br />
+        &nbsp; &nbsp;&nbsp; &nbsp; if (i !== -1) { <br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; i++; <br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;contador++; <br />
+        &nbsp; &nbsp;&nbsp; &nbsp; } <br />
+        &nbsp; &nbsp;} <br />
+        &nbsp; &nbsp;return document.write(`La palabra ${texto} se repite
+        ${contador} veces`);<br />
+        }; <br /><br />palabraRepetida( "Quise cultivar cultivar cultivar un
+        amor y me he quedado solo", "cultivar" );
+      </p>
+
+      <h2>Resultado</h2>
+      <p class="codigo">
+        <script src="../js/ejercicio6.js"></script>
+      </p>
+
+      <div class="container-enlace">
+        <div class="enlace">
+          <a href="Ejercicio5.html">Anterior</a>
+        </div>
+        <div class="enlace">
+          <a href="/Ejercicios logica/Ejercicios_basicos.html">Volver</a>
+        </div>
+        <div class="enlace">
+          <a href="Ejercicio7.html">Siguiente</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

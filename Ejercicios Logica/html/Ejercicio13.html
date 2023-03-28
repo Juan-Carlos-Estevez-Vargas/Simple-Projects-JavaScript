@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <title>Ejercicio 13</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Décimo tercer ejercicio</h1>
+      <h2>Código</h2>
+      <p class="codigo">
+        const parImpar = (numero = undefined) => {<br />
+        &nbsp; &nbsp;if (numero === undefined) return document.write("NO
+        ingresaste ningún número");<br />
+        &nbsp; &nbsp;if (typeof numero !== "number") return
+        document.write("Debes ingresar un número");<br />
+        &nbsp; &nbsp;return numero % 2 === 0 <br />
+        &nbsp; &nbsp;&nbsp; &nbsp;? document.write(`El número ${numero} es par`)
+        <br />
+        &nbsp; &nbsp;&nbsp; &nbsp;: document.write(`El número ${numero} es
+        impar`); <br />
+        };<br /><br />parImpar(20)
+      </p>
+
+      <h2>Resultado</h2>
+      <p class="codigo">
+        <script src="../js/ejercicio13.js"></script>
+      </p>
+
+      <div class="container-enlace">
+        <div class="enlace">
+          <a href="Ejercicio12.html">Anterior</a>
+        </div>
+        <div class="enlace">
+          <a href="/Ejercicios logica/Ejercicios_basicos.html">Volver</a>
+        </div>
+        <div class="enlace">
+          <a href="Ejercicio14.html">Siguiente</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

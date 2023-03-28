@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <title>Ejercicio 22</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Veintidos-avo ejercicio</h1>
+      <h2>Código</h2>
+      <p class="codigo">
+        const arrayAltoBajo = (arr = undefined) => { <br />
+        &nbsp; &nbsp;if (arr === undefined) return document.write("No ingresaste
+        el arr");<br /><br />
+
+        &nbsp; &nbsp;if (!arr instanceof Array)<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;return document.write(<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"El contenido ingresado NO
+        pertenece a un Array"<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;);<br /><br />
+
+        &nbsp; &nbsp;if (arr.length === 0) return document.write("Arreglo
+        vacío");<br /><br />
+
+        &nbsp; &nbsp;for (let num of arr) {<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;if (typeof num != "number")<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;return document.write(`El valor
+        ${num} NO es de tipo numérico`);<br />
+        &nbsp; &nbsp;}<br /><br />
+
+        &nbsp; &nbsp;return document.write(<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;`Array original: [${arr}] Valor mayor:
+        ${Math.max( ...arr )} Valor menor: ${Math.min(...arr)}`<br />
+        &nbsp; &nbsp;);<br />
+        };<br /><br />
+
+        arrayAltoBajo([1, 3, -1, 900, 11]);
+      </p>
+
+      <h2>Resultado</h2>
+      <p class="codigo">
+        <script src="../js/ejercicio22.js"></script>
+      </p>
+
+      <div class="container-enlace">
+        <div class="enlace">
+          <a href="Ejercicio21.html">Anterior</a>
+        </div>
+        <div class="enlace">
+          <a href="/Ejercicios logica/Ejercicios_basicos.html">Volver</a>
+        </div>
+        <div class="enlace">
+          <a href="Ejercicio23.html">Siguiente</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

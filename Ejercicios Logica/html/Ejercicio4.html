@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <title>Ejercicio 4</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Cuarto ejercicio</h1>
+      <h2>Código</h2>
+      <p class="codigo">
+        const repetirTexto = (texto = "", veces = undefined) => { <br />
+        &nbsp; &nbsp; if (!texto) return document.write("No ingresaste texto");
+        <br /><br />
+
+        &nbsp; &nbsp; if (veces === undefined) <br />
+        &nbsp; &nbsp;&nbsp; &nbsp; return document.write( "No ingresaste el
+        número de veces a repetir el texto" ); <br />
+        <br />
+
+        &nbsp; &nbsp; if (veces === 0) <br />
+        &nbsp; &nbsp;&nbsp; &nbsp; return document.write("El número de veces NO
+        puede ser 0"); <br /><br />
+
+        &nbsp; &nbsp;if (Math.sign(veces) === -1) <br />
+        &nbsp; &nbsp;&nbsp; &nbsp; return document.write("El número de veces NO
+        puede ser negativo");<br /><br />
+
+        &nbsp; &nbsp; for (let i = 1; i <= veces; i++)
+        document.write(`${texto}`); <br />
+        };<br /><br />
+        repetirTexto("Hola mundo", 3);
+      </p>
+
+      <h2>Resultado</h2>
+      <p class="codigo">
+        <script src="../js/ejercicio4.js"></script>
+      </p>
+
+      <div class="container-enlace">
+        <div class="enlace">
+          <a href="Ejercicio3.html">Anterior</a>
+        </div>
+        <div class="enlace">
+          <a href="/Ejercicios logica/Ejercicios_basicos.html">Volver</a>
+        </div>
+        <div class="enlace">
+          <a href="Ejercicio5.html">Siguiente</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

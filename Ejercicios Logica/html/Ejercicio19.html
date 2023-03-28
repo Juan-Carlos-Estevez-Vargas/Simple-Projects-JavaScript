@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <title>Ejercicio 19</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Décimo noveno ejercicio</h1>
+      <h2>Código</h2>
+      <p class="codigo">
+        const validarNombre = (nombre = "") => {<br />
+        &nbsp; &nbsp;if (nombre === "") <br />
+        &nbsp; &nbsp;&nbsp; &nbsp;return document.write("NO ingresaste ninguna
+        cadena");<br />
+        &nbsp; &nbsp;if (typeof nombre !== "string")<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;return document.write(<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"El dato ingresado NO pertenece a
+        una cadena de texto"<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;);<br /><br />
+
+        &nbsp; &nbsp;let expresion_regular =
+        /^[A-Za-zÑñ+ÁáÉéÍíÓóÚú\s]+$/g.test(nombre);<br /><br />
+
+        &nbsp; &nbsp;return expresion_regular<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;? document.write(`${nombre} es un nombre
+        válido`)<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;: document.write(`${nombre} NO es un nombre
+        válido`);<br />
+        };<br /><br />
+
+        validarNombre("Juan Estévez");
+      </p>
+
+      <h2>Resultado</h2>
+      <p class="codigo">
+        <script src="../js/ejercicio19.js"></script>
+      </p>
+
+      <div class="container-enlace">
+        <div class="enlace">
+          <a href="Ejercicio18.html">Anterior</a>
+        </div>
+        <div class="enlace">
+          <a href="/Ejercicios logica/Ejercicios_basicos.html">Volver</a>
+        </div>
+        <div class="enlace">
+          <a href="Ejercicio20.html">Siguiente</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <title>Ejercicio 8</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Octavo ejercicio</h1>
+      <h2>Código</h2>
+      <p class="codigo">
+        const eliminarCaracteres = (texto = "", patron = "") => <br />
+        &nbsp; &nbsp; !texto <br />
+        &nbsp; &nbsp;&nbsp; &nbsp; ? console.log("NO ingresaste ningún texto")
+        <br />
+        &nbsp; &nbsp;&nbsp; &nbsp; : !patron <br />
+        &nbsp; &nbsp;&nbsp; &nbsp; ? console.warn("NO ingresaste ningún patrón a
+        eliminar") <br />
+        &nbsp; &nbsp;&nbsp; &nbsp; : document.write(texto.replace(new
+        RegExp(patron, "ig"), "")); <br />
+        <br />
+        eliminarCaracteres() <br />
+        eliminarCaracteres('xyz') <br />
+        eliminarCaracteres('xyz1, xyz2, xyz3, xyz4, xyz5','xyz') <br />
+      </p>
+
+      <h2>Resultado</h2>
+      <p class="codigo">
+        <script src="../js/ejercicio8.js"></script>
+      </p>
+
+      <div class="container-enlace">
+        <div class="enlace">
+          <a href="Ejercicio7.html">Anterior</a>
+        </div>
+        <div class="enlace">
+          <a href="/Ejercicios logica/Ejercicios_basicos.html">Volver</a>
+        </div>
+        <div class="enlace">
+          <a href="Ejercicio9.html">Siguiente</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

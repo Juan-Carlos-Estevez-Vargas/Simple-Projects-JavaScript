@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <title>Ejercicio 21</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Veintiun-avo ejercicio</h1>
+      <h2>Código</h2>
+      <p class="codigo">
+        const arrayAlCuadrado = (array = undefined) => {<br />
+        &nbsp; &nbsp;if (array === undefined)<br />
+        &nbsp; &nbsp; &nbsp; &nbsp;return document.write("No ingresaste el
+        array");<br />
+        &nbsp; &nbsp;if (!array instanceof Array)<br />
+        &nbsp; &nbsp; &nbsp; &nbsp;return document.write( "El contenido
+        ingresado NO pertenece a un Array" );<br /><br />
+
+        &nbsp; &nbsp;let array2 = [];<br /><br />
+
+        &nbsp; &nbsp;for (let i in array) {<br />
+        &nbsp; &nbsp; &nbsp; &nbsp;array2[i] = array[i] * array[i];<br />
+        &nbsp; &nbsp;}<br /><br />
+
+        &nbsp; &nbsp;return document.write(array2);<br />
+        };<br /><br />
+
+        arrayAlCuadrado([1, 2, 3]);
+      </p>
+
+      <h2>Resultado</h2>
+      <p class="codigo">
+        <script src="../js/ejercicio21.js"></script>
+      </p>
+
+      <div class="container-enlace">
+        <div class="enlace">
+          <a href="Ejercicio20.html">Anterior</a>
+        </div>
+        <div class="enlace">
+          <a href="/Ejercicios logica/Ejercicios_basicos.html">Volver</a>
+        </div>
+        <div class="enlace">
+          <a href="Ejercicio22.html">Siguiente</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

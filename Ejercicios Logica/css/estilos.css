@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: antiquewhite;
+}
+h1 {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: wheat;
+}
+h2 {
+  text-align: left;
+  padding: 20px;
+  margin: 10px;
+  color: wheat;
+}
+.titulo {
+  color: azure;
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  margin-top: 8px;
+  padding: auto;
+}
+.Ejercicios {
+  width: 53%;
+  margin: auto;
+  border: 3px solid pink;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: darkslateblue;
+}
+.Ejercicios:hover {
+  width: 50%;
+}
+.texto {
+  color: blanchedalmond;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 2%;
+}
+.codigo {
+  color: blanchedalmond;
+  text-align: left;
+  margin-left: 8%;
+}
+.container-enlace {
+  width: 50%;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  text-align: center;
+}
+.enlace {
+  display: inline-block;
+  border: 2px solid azure;
+  color: azure;
+  text-align: center;
+  width: 15%;
+  background-color: magenta;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 2%;
+}
+a {
+  text-decoration: none;
+  color: cornsilk;
+  font-size: 20px;
+}
+.enlace:hover {
+  text-decoration: underline;
+}
+.container {
+  width: 85%;
+  margin: auto;
+  border: 3px solid pink;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: darkslategray;
+  margin-top: 20px;
+  text-align: center;
+}

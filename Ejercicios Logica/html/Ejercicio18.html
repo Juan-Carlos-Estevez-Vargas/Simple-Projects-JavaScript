@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <title>Ejercicio 18</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Décimo octavo ejercicio</h1>
+      <h2>Código</h2>
+      <p class="codigo">
+        const contadorVocalesConsonantes = (cadena = "") => {<br />
+        &nbsp; &nbsp;if (cadena === "") <br />
+        &nbsp; &nbsp;&nbsp; &nbsp;return document.write("NO ingresaste ninguna
+        cadena"); <br />
+        &nbsp; &nbsp;if (typeof cadena !== "string") <br />
+        &nbsp; &nbsp;&nbsp; &nbsp;return document.write( <br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"El dato ingresado NO pertenece a
+        una cadena de texto" <br />
+        &nbsp; &nbsp;&nbsp; &nbsp;); <br /><br />
+
+        &nbsp; &nbsp;let contadorVocales = 0, contadorConsonantes = 0;<br /><br />
+
+        &nbsp; &nbsp;for (let letra of cadena) {<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;if (/[aeiouAEIOUáéíóúÁÉÍÓÚ]/.test(letra))
+        contadorVocales++;<br /><br />
+
+        &nbsp; &nbsp;&nbsp; &nbsp;if
+        (/[bcdfghjklmnñpqrstvwxyzBCDFGHJKLMNÑPQRSTVWXYZ]/.test(letra))<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;contadorConsonantes++;<br />
+        &nbsp; &nbsp;}<br /><br />
+        &nbsp; &nbsp;return document.write( `Vocales: ${contadorVocales}
+        Consonantes: ${contadorConsonantes}` );<br />
+        };<br /><br />
+
+        contadorVocalesConsonantes("Perra re malparida");
+      </p>
+
+      <h2>Resultado</h2>
+      <p class="codigo">
+        <script src="../js/ejercicio18.js"></script>
+      </p>
+
+      <div class="container-enlace">
+        <div class="enlace">
+          <a href="Ejercicio17.html">Anterior</a>
+        </div>
+        <div class="enlace">
+          <a href="/Ejercicios logica/Ejercicios_basicos.html">Volver</a>
+        </div>
+        <div class="enlace">
+          <a href="Ejercicio19.html">Siguiente</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

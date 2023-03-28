@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <title>Ejercicio 15</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Décimo quinto ejercicio</h1>
+      <h2>Código</h2>
+      <p class="codigo">
+        const convertirBinarioDecimal = ( numero = undefined, base = undefined )
+        => { <br />
+        &nbsp; &nbsp;if (numero === undefined || base === undefined) return
+        document.write("NO ingresaste algún dato"); <br />
+        &nbsp; &nbsp;if (typeof numero !== "number" || typeof base !== "number")
+        return document.write("Tipo de dato incorrecto"); <br />
+        <br />
+
+        &nbsp; &nbsp;if (base === 2) { <br />
+        &nbsp; &nbsp;&nbsp; &nbsp;return document.write( `El número ${numero}
+        base ${base} es equivalente ${parseInt( numero, base )} base 10` );
+        <br />
+        &nbsp; &nbsp;} else if (base === 10) { <br />
+        &nbsp; &nbsp;&nbsp; &nbsp;return document.write( `El número ${numero}
+        base ${base} es equivalente ${numero.toString( 2 )} base 2` ); <br />
+        &nbsp; &nbsp;} else { <br />
+        &nbsp; &nbsp;&nbsp; &nbsp;return document.write("Tipo de base
+        INCORRECTA"); <br />
+        &nbsp; &nbsp;} <br />
+        };<br /><br />convertirBinarioDecimal(125,2) <br />
+        convertirBinarioDecimal(10001,10)
+      </p>
+
+      <h2>Resultado</h2>
+      <p class="codigo">
+        <script src="../js/ejercicio15.js"></script>
+      </p>
+      <p class="codigo">
+        <script>
+          convertirBinarioDecimal(125, 10);
+        </script>
+      </p>
+
+      <div class="container-enlace">
+        <div class="enlace">
+          <a href="Ejercicio14.html">Anterior</a>
+        </div>
+        <div class="enlace">
+          <a href="/Ejercicios logica/Ejercicios_basicos.html">Volver</a>
+        </div>
+        <div class="enlace">
+          <a href="Ejercicio16.html">Siguiente</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

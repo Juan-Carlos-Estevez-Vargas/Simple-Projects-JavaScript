@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <title>Ejercicio 7</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Séptimo ejercicio</h1>
+      <h2>Código</h2>
+      <p class="codigo">
+        const palindromo = (cadena = "") => { <br />
+        &nbsp; &nbsp; if (!cadena) console.warn("NO ingresaste ninguna
+        palabra"); <br />
+        &nbsp; &nbsp; cadena = cadena.toLowerCase(); <br />
+        &nbsp; &nbsp; let reves = cadena.split("").reverse().join(""); <br />
+        &nbsp; &nbsp; return cadena === reves <br />
+        &nbsp; &nbsp;&nbsp; &nbsp; ? document.write(`La palabra ${cadena} es
+        palíndroma`) <br />
+        &nbsp; &nbsp;&nbsp; &nbsp; : document.write(`La palabra ${cadena} NO es
+        palíndroma`); <br />
+        }; <br /><br />
+        palindromo("salas");
+      </p>
+
+      <h2>Resultado</h2>
+      <p class="codigo">
+        <script src="../js/ejercicio7.js"></script>
+      </p>
+
+      <div class="container-enlace">
+        <div class="enlace">
+          <a href="Ejercicio6.html">Anterior</a>
+        </div>
+        <div class="enlace">
+          <a href="/Ejercicios logica/Ejercicios_basicos.html">Volver</a>
+        </div>
+        <div class="enlace">
+          <a href="Ejercicio8.html">Siguiente</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

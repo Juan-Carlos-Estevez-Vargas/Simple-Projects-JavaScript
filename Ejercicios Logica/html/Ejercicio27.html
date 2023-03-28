@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <title>Ejercicio 27</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Veintisiete-avo ejercicio</h1>
+      <h2>Código</h2>
+      <p class="codigo">
+        class Pelicula { <br />
+        &nbsp; &nbsp;constructor({ id, titulo, director, estreno, pais, generos,
+        calificacion }) {<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;this._id = id;<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;this._titulo = titulo;<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;this._director = director;<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;this._estreno = estreno;<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;this._pais = pais;<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;this._generos = generos;<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;this._calificacion = calificacion;<br /><br />
+
+        &nbsp; &nbsp;&nbsp; &nbsp;this.validarIMDB(id);<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;this.validarTitulo(titulo);<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;this.validarDirector(director);<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;this.validarEstreno(estreno);<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;this.validarPais(pais);<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;this.validarGeneros(generos);<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;this.validarCalificacion(calificacion);<br />
+        &nbsp; &nbsp;}<br /><br />
+
+        &nbsp; &nbsp;static get listaGeneros() {<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;return [<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Action",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Adult",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Adventure",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Animation",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Biography",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Comedy",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Crime",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Documentary",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Family",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Drama",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Family",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Fantasy",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Film Noir",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Game-Show",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"History",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Horror",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Musical",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Music",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Mystery",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"News",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Reality-TV",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Romance",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Sci-Fi",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Short",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Sport",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Talk-Show",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Thriller",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"War",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;"Western",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;];<br />
+        &nbsp; &nbsp;}<br /><br />
+
+        &nbsp; &nbsp;static generosAceptados() {<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;return console.info(<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;`Los géneros aceptados son:
+        ${Pelicula.listaGeneros.join(", ")}`<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;);<br />
+        &nbsp; &nbsp;}<br /><br />
+
+        &nbsp; &nbsp;validarCadena(propiedad, valor) {<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;if (!valor) return console.warn(`${propiedad}
+        "${valor}" está vacío`);<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;if (typeof valor !== "string")<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;return console.error(<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;`${propiedad}
+        "${valor}" ingresado NO es una cadena de texto`<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;);<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;return true;<br />
+        &nbsp; &nbsp;}<br /><br />
+
+        &nbsp; &nbsp;validarLongitudCadena(propiedad, valor, longitud) {<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;if (valor.lenght > longitud)<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;return console.error(<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;`${propiedad}
+        "${valor}" excede el número de caracteres permitidos (${longitud}).`<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;);<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;return true;<br />
+        &nbsp; &nbsp;}<br /><br />
+
+        &nbsp; &nbsp;validarNumero(propiedad, valor) {<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;if (!valor) return console.error(`${propiedad}
+        "${valor}" está vacío`);<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;if (typeof valor !== "number")<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;return console.error(<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;`${propiedad}
+        "${valor}" ingresado NO es un número.`<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;);<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;return true;<br />
+        &nbsp; &nbsp;}<br /><br />
+
+        &nbsp; &nbsp;validarArreglo(propiedad, valor) {<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;if (!valor) return console.warn(`${propiedad}
+        "${valor}" está vacío`);<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;if (!valor instanceof Array)<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;return console.error(<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;`${propiedad}
+        "${valor}" ingresado NO es un arreglo`<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;);<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;if (valor.lenght === 0)<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;return
+        console.error(`${propiedad} "${valor}" NO tiene datos`);<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;for (let cadena of valor) {<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;if (typeof cadena !==
+        "string")<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;return
+        console.error(<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;`El
+        valor "${cadena}" ingresado NO es una cadena de texto`<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;);<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;}<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;return true;<br />
+        &nbsp; &nbsp;}<br /><br />
+
+        &nbsp; &nbsp;validarIMDB(id) {<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;if (this.validarCadena("IMDB ID", id))<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;if
+        (!/^([a-z]){2}([0-9]){7}$/.test(id))<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;return
+        console.error(<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+        &nbsp;`IMDB ID "${id}" no es válido, debe tener 9 caracteres, los
+        primeros 2 deben ser letras minúsculas y los 7 restantes números
+        enteros.`<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;);<br />
+        &nbsp; &nbsp;}<br /><br />
+
+        &nbsp; &nbsp;validarTitulo(titulo) {<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;if (this.validarCadena("Título", titulo))<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+        &nbsp;this.validarLongitudCadena("Título", titulo, 100);<br />
+        &nbsp; &nbsp;}<br /><br />
+
+        &nbsp; &nbsp;validarDirector(director) {<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;if (this.validarCadena("Director",
+        director))<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+        &nbsp;this.validarLongitudCadena("Director", director, 50);<br />
+        &nbsp; &nbsp;}<br /><br />
+
+        &nbsp; &nbsp;validarEstreno(estreno) {<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;if (this.validarNumero("Año de estreno",
+        estreno))<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;if
+        (!/^([0-9]{4})$/.test(estreno))<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;return
+        console.error(<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;`Año de
+        estreno "${estreno}" no es válido, debe tener 4 números enteros.`<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;);<br />
+        &nbsp; &nbsp;}<br /><br />
+
+        &nbsp; &nbsp;validarPais(pais) {<br />
+        &nbsp; &nbsp;&nbsp; &nbsp; this.validarArreglo("Pais", pais);<br />
+        &nbsp; &nbsp;}<br /><br />
+
+        &nbsp; &nbsp;validarGeneros(generos) {<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;if (this.validarArreglo("Generos", generos))
+        {<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;for (let genero of generos) {<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;console.log(genero,
+        Pelicula.listaGeneros.includes(genero));<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;if
+        (!Pelicula.listaGeneros.includes(genero)) {<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+        &nbsp;console.error(`Género(s) incorrectos "${generos.join(", ")}"`);<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+        &nbsp;Pelicula.generosAceptados();<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;}<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;}<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;}<br />
+        &nbsp; &nbsp;}<br /><br />
+
+        &nbsp; &nbsp;validarCalificacion(calificacion) {<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;if (this.validarNumero("Calificación",
+        calificacion))<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;return calificacion < 0 ||
+        calificacion > 10<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;? console.error("La
+        calificación debe ser de 0 a 10.")<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;:
+        (this._calificacion = calificacion.toFixed(1));<br />
+        &nbsp; &nbsp;}<br /><br />
+
+        &nbsp; &nbsp;fichaTecnica() {<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;document.write(<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;`"<br />""<br />"Título:
+        ${this._titulo} "<br />" Director: ${ this._director<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;} "<br />" Año: ${this._estreno}
+        "<br />" Pais: ${this._pais.join( " - "<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;)} "<br />" Géneros:
+        ${this._generos.join(", ")} "<br />" Calificación: ${
+        this._calificacion<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;} "<br />" IMDB ID:
+        ${this._id}.`<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;);<br />
+        &nbsp; &nbsp;}<br />
+        }<br /><br />
+
+        const peliculas = [<br />
+        &nbsp; &nbsp;{<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;id: "tt6785643",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;titulo: "Anaconda 2",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;director: "James Cameron",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;estreno: 2012,<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;pais: ["Colombia"],<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;generos: ["Adventure"],<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;calificacion: 7,<br />
+        &nbsp; &nbsp;},<br />
+        &nbsp; &nbsp;{<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;id: "fr5671234",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;titulo: "El retrato de Dorian Gray",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;director: "Arnulfo Buitrago",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;estreno: 2000,<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;pais: ["USA", "Canadá"],<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;generos: ["Drama", "Horror"],<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;calificacion: 7.5,<br />
+        &nbsp; &nbsp;},<br />
+        &nbsp; &nbsp;{<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;id: "hj7623189",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;titulo: "Casese quien pueda",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;director: "Maria Jimenez",<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;estreno: 2014,<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;pais: ["México"],<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;generos: ["Comedy", "Romance"],<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;calificacion: 7.5,<br />
+        &nbsp; &nbsp;},<br />
+        ];<br /><br />
+
+        peliculas.forEach((el) => new Pelicula(el).fichaTecnica());
+      </p>
+
+      <h2>Resultado</h2>
+      <p class="codigo">
+        <script src="../js/ejercicio27.js"></script>
+      </p>
+
+      <div class="container-enlace">
+        <div class="enlace">
+          <a href="Ejercicio26.html">Anterior</a>
+        </div>
+        <div class="enlace">
+          <a href="/Ejercicios logica/Ejercicios_basicos.html">Volver</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

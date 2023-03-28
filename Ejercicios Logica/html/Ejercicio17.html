@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <title>Ejercicio 17</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Décimo séptimo ejercicio</h1>
+      <h2>Código</h2>
+      <p class="codigo">
+        const tiempoTranscurrido = (fecha = undefined) => { <br />
+        &nbsp; &nbsp;if (fecha === undefined) return document.write("NO
+        ingresaste una fecha"); <br />
+        &nbsp; &nbsp;if (!fecha instanceof Date) <br />
+        &nbsp; &nbsp;&nbsp; &nbsp;return document.write( <br />
+        "El valor ingresado NO corresponde a una fecha válida" ); <br /><br />
+
+        &nbsp; &nbsp;let fechaActualMenosFechaIngresada = new Date().getTime() -
+        fecha.getTime(); <br />
+        &nbsp; &nbsp;let aniosEnMilisegundos = 1000 * 60 * 60 * 24 * 365; <br />
+        &nbsp; &nbsp;let resultado = Math.floor( fechaActualMenosFechaIngresada
+        / aniosEnMilisegundos ); <br />
+        <br />
+        &nbsp; &nbsp;return Math.sign(resultado) === -1 <br />
+        &nbsp; &nbsp;&nbsp; &nbsp;? document.write( <br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;`Faltan ${Math.abs( <br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;resultado <br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;)} años para llegar al
+        ${fecha.getFullYear()},` <br />
+        &nbsp; &nbsp;&nbsp; &nbsp;) <br />
+        &nbsp; &nbsp;: Math.sign(resultado) === 1 <br />
+        &nbsp; &nbsp;? document.write( <br />
+        &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;`Han transcurrido ${resultado}
+        desde ${fecha.getFullYear()}` <br />
+        &nbsp; &nbsp;&nbsp; &nbsp;) <br />
+        &nbsp; &nbsp;: document.write("Estamos en el año actual."); <br />
+        }; <br />
+        <br />
+        tiempoTranscurrido(2090, 4, 14);
+      </p>
+
+      <h2>Resultado</h2>
+      <p class="codigo">
+        <script src="../js/ejercicio17.js"></script>
+      </p>
+
+      <div class="container-enlace">
+        <div class="enlace">
+          <a href="Ejercicio16.html">Anterior</a>
+        </div>
+        <div class="enlace">
+          <a href="/Ejercicios logica/Ejercicios_basicos.html">Volver</a>
+        </div>
+        <div class="enlace">
+          <a href="Ejercicio18.html">Siguiente</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

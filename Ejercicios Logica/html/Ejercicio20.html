@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <title>Ejercicio 20</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Veinteavo ejercicio</h1>
+      <h2>Código</h2>
+      <p class="codigo">
+        const validarEmail = (email = "") => { <br />
+        &nbsp; &nbsp;if (email === "") return document.write("NO ingresaste
+        ningun email");<br />
+        &nbsp; &nbsp;if (typeof email !== "string")<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;return document.write( "El dato ingresado NO
+        pertenece a una cadena de texto" );<br /><br />
+
+        &nbsp; &nbsp;let expresion_regular =<br />
+        &nbsp; &nbsp;&nbsp;
+        &nbsp;/[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i.test(
+        email );<br /><br />
+
+        &nbsp; &nbsp;return expresion_regular<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;? document.write(`${email} es un email
+        válido`)<br />
+        &nbsp; &nbsp;&nbsp; &nbsp;: document.write(`${email} NO es un email
+        válido`);<br />
+        };<br /><br />
+
+        validarEmail("juank2001estevez@gmail.com");
+      </p>
+
+      <h2>Resultado</h2>
+      <p class="codigo">
+        <script src="../js/ejercicio20.js"></script>
+      </p>
+
+      <div class="container-enlace">
+        <div class="enlace">
+          <a href="Ejercicio19.html">Anterior</a>
+        </div>
+        <div class="enlace">
+          <a href="/Ejercicios logica/Ejercicios_basicos.html">Volver</a>
+        </div>
+        <div class="enlace">
+          <a href="Ejercicio21.html">Siguiente</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

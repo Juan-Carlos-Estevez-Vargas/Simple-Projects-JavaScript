@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/estilos.css" />
+    <title>Ejercicio 16</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Décimo sexto ejercicio</h1>
+      <h2>Código</h2>
+      <p class="codigo">
+        const montoFinal = (monto = undefined, descuento = undefined) => {<br />
+        &nbsp; &nbsp;if (monto === undefined || descuento === undefined) return
+        document.write("No ingresaste el monto o el descuento");<br />
+        &nbsp; &nbsp;if (typeof monto !== "number" || typeof descuento !==
+        "number") return document.write("Los datos ingresados son
+        incorrectos");<br /><br />
+
+        &nbsp; &nbsp;return document.write( `Monto final: ${monto - (monto *
+        descuento) / 100}` );<br />
+        };<br /><br />montoFinal(1000, 20);
+      </p>
+
+      <h2>Resultado</h2>
+      <p class="codigo">
+        <script src="../js/ejercicio16.js"></script>
+      </p>
+
+      <div class="container-enlace">
+        <div class="enlace">
+          <a href="Ejercicio15.html">Anterior</a>
+        </div>
+        <div class="enlace">
+          <a href="/Ejercicios logica/Ejercicios_basicos.html">Volver</a>
+        </div>
+        <div class="enlace">
+          <a href="Ejercicio17.html">Siguiente</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
