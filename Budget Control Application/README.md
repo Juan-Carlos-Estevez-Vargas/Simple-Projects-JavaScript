@@ -3,6 +3,8 @@ Aplicativo Frontend con una interfaz bastante amigable y responsive sobre el con
 
 El proyecto no cuenta con conexión a base de datos, ya que, es solo un proyecto para practicar diseño web.
 
+Puedes ver la aplicación desplegada en la siguiente [ruta.](https://budget-control-js.netlify.app/)
+
 ### Si te ha gustado el proyecto invitame un café
 <div align="left">
   <a href="https://paypal.me/JEstevezVargas" target="_blank" style="display: inline-block;">
